@@ -1,7 +1,10 @@
 @echo off
-::My Github is
+::Github link
 ::https://github.com/The-Joker-Official/Devil
-
+if %1 == virusfarm goto virusfarm
+if %2 == collabvm goto collabvm
+else goto auto
+:auto
 title Loading...
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v "Virus Farm Loader"
 if %errorlevel%==0 goto virusfarm
