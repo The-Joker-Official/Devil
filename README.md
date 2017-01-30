@@ -3,6 +3,16 @@ This is the official GitHub for Devil.
 
 Devil is a simple 1 KB batch file that is designed to block the computer, showing an unescapable VBScript dialog box, with a cheeky message in it.
 
+Command line parameters
+-
+Most of the time, these parameters are not useful, as Devil automatically checks if the virtual machine is on Collab VM or the Virus Farm. But, if you want to switch between Collab VM mode and Virus Farm mode, you can:
+
+To switch to Collab VM mode, type `collabvm`:
+`%0 collabvm`
+
+To switch to Virus Farm mode, type `virusfarm`:
+`%0 virusfarm`
+
 Notes
 -
 As you may have noticed, I was going to say "Features", but then I realized that it sounds more like notes rather than features.
