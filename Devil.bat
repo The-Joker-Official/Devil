@@ -1,9 +1,14 @@
 @echo off
 ::Github link
 ::https://github.com/The-Joker-Official/Devil
-if %1 == virusfarm goto virusfarm
-if %2 == collabvm goto collabvm
-else goto auto
+IF "%~1"=="" GOTO auto
+IF "%~1"=="collabvm" GOTO collabvm
+IF "%~1"=="collab" GOTO collabvm
+IF "%~1"=="cvm" GOTO collabvm
+IF "%~1"=="c" GOTO collabvm
+IF "%~1"=="virusfarm" GOTO virusfarm
+IF "%~1"=="virus" GOTO virusfarm
+IF "%~1"=="v" GOTO virusfarm
 :auto
 title Loading...
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v "Virus Farm Loader"
