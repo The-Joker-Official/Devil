@@ -7,10 +7,12 @@ Command line parameters
 -
 Most of the time, these parameters are not useful, as Devil automatically checks if the virtual machine is on Collab VM or the Virus Farm. But, if you want to switch between Collab VM mode and Virus Farm mode, you can:
 
-To switch to Collab VM mode, type `collabvm`:
+To switch to Collab VM mode, type `collabvm`, `collab`, `cvm`, or `c`. For example:
+
 `%0 collabvm`
 
-To switch to Virus Farm mode, type `virusfarm`:
+To switch to Virus Farm mode, type `virusfarm`, `virus`, or `v`. For example:
+
 `%0 virusfarm`
 
 Notes
